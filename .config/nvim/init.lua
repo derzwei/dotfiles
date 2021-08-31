@@ -1,0 +1,5 @@
+require('plugins')
+require('lspconfig')
+require('lualine')
+require('compe')
+require('config')
