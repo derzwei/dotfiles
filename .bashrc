@@ -5,6 +5,20 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Mantener las últimas 10000 entradas
+HISTSIZE=10000
+HISTFILESIZE=10000
+PROMPT_COMMAND='history -a'
+
+# Ignorar comandos duplicados
+export HISTCONTROL=ignoredups:erasedups
+
+# Ignorar determinados comandos
+#export HISTIGNORE="history:ls:pwd:"
+
+# Añadir al historial en lugar de sobreescribir
+shopt -s histappend
+
 alias ls='ls --color=auto'
 alias ll='ls -lah --color=auto'
 alias vim='nvim'

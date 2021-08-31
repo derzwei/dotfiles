@@ -98,7 +98,7 @@ theme.titlebar_maximized_button_normal_active = themes_path.."default/titlebar/m
 theme.titlebar_maximized_button_focus_active  = themes_path.."default/titlebar/maximized_focus_active.png"
 
 --theme.wallpaper = themes_path.."default/background.png"
-theme.wallpaper = "~/Imágenes/__hu_tao_genshin_impact_drawn_by_river_river_ga__f4c11a511d65d920522bb190a80cba38.jpg"
+theme.wallpaper = "~/Downloads/Assassins_Pride_02.jpg"
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path.."default/layouts/fairhw.png"
 theme.layout_fairv = themes_path.."default/layouts/fairvw.png"
