@@ -11,7 +11,7 @@ local themes_path = gfs.get_themes_dir()
 
 local theme = {}
 
-theme.font          = "Go Mono 9"
+theme.font          = "Liberation Mono 9"
 
 theme.bg_normal     = "#1d1d1d"
 theme.bg_focus      = "#bc5653"
@@ -98,7 +98,7 @@ theme.titlebar_maximized_button_normal_active = themes_path.."default/titlebar/m
 theme.titlebar_maximized_button_focus_active  = themes_path.."default/titlebar/maximized_focus_active.png"
 
 --theme.wallpaper = themes_path.."~/Downloads/Assassins_Pride_01.jpg"
-theme.wallpaper = "~/Downloads/Assassins_Pride_02.jpg"
+theme.wallpaper = "~/Downloads/Assassins_Pride_01.jpg"
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path.."default/layouts/fairhw.png"
 theme.layout_fairv = themes_path.."default/layouts/fairvw.png"
