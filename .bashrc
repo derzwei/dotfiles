@@ -19,9 +19,11 @@ export HISTCONTROL=ignoredups:erasedups
 # Añadir al historial en lugar de sobreescribir
 shopt -s histappend
 
+# Establecer alias
 alias ls='ls --color=auto'
 alias ll='ls -lah --color=auto'
 alias vim='nvim'
 alias ytmp3='youtube-dl --extract-audio --audio-format mp3'
 
+# Bash prompt personalizado
 PS1='\[\e[1;31m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\]\[\e[1;37m\] '
