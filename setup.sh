@@ -9,10 +9,10 @@ apt-get update && apt-get upgrade
 #: Instalar paquetes {{{
 
 #: Base
-apt-get -y install lightdm picom awesome kitty neovim xsel scrot firefox-esr
+apt-get -y install firmware-iwlwifi iwd lightdm picom awesome kitty xsel scrot firefox-esr
 
 #: Fuentes
-apt-get -y install fonts-go fonts-ipafont
+apt-get -y install fonts-fantasque-sans fonts-ipafont
 
 #: Media
 apt-get -y alsa-utils pulseaudio pulseaudio-alsa mpd ncmpcpp sxiv mpv youtube-dl
@@ -52,14 +52,20 @@ ln -s ~/dotfiles/.config/mpd/mpd.conf ~/.config/mpd/mpd.conf
 ln -s ~/dotfiles/.config/ncmpcpp/config ~/.config/ncmpcpp/config
 
 #: neovim
-ln -s ~/dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
-ln -s ~/dotfiles/.config/nvim/autoload/plug.vim ~/.config/nvim/plug.vim
+#ln -s ~/dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
+#ln -s ~/dotfiles/.config/nvim/autoload/plug.vim ~/.config/nvim/plug.vim
 
 #: }}}
+
+#: Habilitar el servicio de iwd
+systemctl enable iwd
+
+#: Habilitar el servicio desystemd-resolve
+systemctl enable systemd-resolved
 
 #: Habilitar el servicio de lightdm
 systemctl enable lightdm
 
 #: Habilitar el servicio de mpd
-systemctl --user start mpd.service
-systemctl --user enable mpd.service
+systemctl --user start mpd
+systemctl --user enable mpd
