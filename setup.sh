@@ -9,7 +9,7 @@ apt-get update && apt-get upgrade
 #: Instalar paquetes {{{
 
 #: Base
-apt-get -y install firmware-iwlwifi iwd lightdm picom awesome kitty vim xsel scrot firefox-esr
+apt-get -y install firmware-iwlwifi iwd lightdm picom awesome kitty xsel scrot chromium
 
 #: Fuentes
 apt-get -y install fonts-fantasque-sans fonts-ipafont
@@ -24,7 +24,7 @@ apt-get -y neofetch
 
 #: Crear directorios de configuración
 
-mkdir -p ~/.config/{awesome/themes/default,kitty,mpd,ncmpcpp,vim/autoload}
+mkdir -p ~/.config/{awesome/themes/default,kitty,mpd,ncmpcpp,nvim/autoload}
 
 #: Crear enlaces simbólicos de los archivos de configuración {{{
 
@@ -42,8 +42,8 @@ ln -s ~/dotfiles/.config/kitty/{kitty.conf,Japanesque.conf} ~/.config/kitty/
 #: picom
 #ln -s ~/dotfiles/.config/picom/picom.conf ~/.config/picom/picom.conf
 
-#: chromium/chrome
-#ln -s ~/dotfiles/.config/chrome-flags.conf ~/.config/chrome-flags.conf
+#: chromium
+ln -s ~/dotfiles/.config/chromium-flags.conf ~/.config/chromium-flags.conf
 
 #: mpd
 ln -s ~/dotfiles/.config/mpd/mpd.conf ~/.config/mpd/mpd.conf
@@ -51,9 +51,9 @@ ln -s ~/dotfiles/.config/mpd/mpd.conf ~/.config/mpd/mpd.conf
 #: ncmpcpp
 ln -s ~/dotfiles/.config/ncmpcpp/config ~/.config/ncmpcpp/config
 
-#: vim
-ln -s ~/dotfiles/.config/vim/init.vim ~/.config/vim/init.vim
-ln -s ~/dotfiles/.config/vim/autoload/plug.vim ~/.config/vim/plug.vim
+#: nvim
+#ln -s ~/dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
+#ln -s ~/dotfiles/.config/nvim/autoload/plug.vim ~/.config/nvim/plug.vim
 
 #: }}}
 
