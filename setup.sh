@@ -9,7 +9,7 @@ apt-get update && apt-get upgrade
 #: Instalar paquetes {{{
 
 #: Base
-apt-get -y install firmware-iwlwifi iwd tlp acpi-call-dkms lightdm picom awesome kitty xsel scrot chromium
+apt-get -y install firmware-iwlwifi iwd tlp acpi-call-dkms lightdm picom mesa-utils xbacklight awesome kitty xsel scrot chromium
 
 #: Fuentes
 apt-get -y install fonts-fantasque-sans fonts-ipafont
