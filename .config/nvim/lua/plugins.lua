@@ -19,5 +19,6 @@ require('packer').startup(function()
   use 'neovim/nvim-lspconfig'                                                           -- Collection of configurations for built-in LSP client
   use 'hrsh7th/nvim-compe'                                                              -- Autocompletion plugin
   use {'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}} -- Statusline written in pure lua.
+  use "lukas-reineke/indent-blankline.nvim"                                             -- Indent guides for Neovim
   use {'npxbr/gruvbox.nvim', requires = {'rktjmp/lush.nvim'}}                           -- Lua port of the most famous vim colorscheme
 end)
