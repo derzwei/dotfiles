@@ -277,7 +277,7 @@ globalkeys = gears.table.join(
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
     
-    -- Open google-chrome
+    -- Open chromium
     awful.key({ modkey }, "b", function ()
     awful.util.spawn("chromium --enable-features=WebUIDarkMode --force-dark-mode") end,
               {description = "open a browser", group = "zwei"}),
