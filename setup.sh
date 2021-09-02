@@ -15,7 +15,7 @@ apt-get -y install firmware-iwlwifi iwd tlp acpi-call-dkms lightdm picom mesa-ut
 apt-get -y install fonts-fantasque-sans fonts-ipafont
 
 #: Media
-apt-get -y install alsa-utils pulseaudio pulseaudio-alsa mpd ncmpcpp sxiv mpv youtube-dl
+apt-get -y install alsa-utils pulseaudio mpd ncmpcpp sxiv mpv youtube-dl
 
 #: Misceláneo
 apt-get -y install neofetch
