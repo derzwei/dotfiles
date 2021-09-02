@@ -15,42 +15,42 @@ apt-get -y install firmware-iwlwifi iwd tlp acpi-call-dkms lightdm picom awesome
 apt-get -y install fonts-fantasque-sans fonts-ipafont
 
 #: Media
-apt-get -y alsa-utils pulseaudio pulseaudio-alsa mpd ncmpcpp sxiv mpv youtube-dl
+apt-get -y install alsa-utils pulseaudio pulseaudio-alsa mpd ncmpcpp sxiv mpv youtube-dl
 
 #: Misceláneo
-apt-get -y neofetch
+apt-get -y install neofetch
 
 #: }}}
 
 #: Crear directorios de configuración
 
-mkdir -p ~/.config/{awesome/themes/default,kitty,mpd,ncmpcpp,nvim/autoload}
+mkdir -p /home/zwei/.config/{awesome/themes/default,kitty,mpd,ncmpcpp,nvim/autoload}
 
 #: Crear enlaces simbólicos de los archivos de configuración {{{
 
 #: bashrc
-rm ~/.bashrc
-ln -s ~/dotfiles/.bashrc ~/.bashrc
+rm /home/zwei/.bashrc
+ln -s /home/zwei/dotfiles/.bashrc /home/zwei/.bashrc
 
 #: awesome
-ln -s ~/dotfiles/.config/awesome/rc.lua ~/.config/awesome/rc.lua
-ln -s ~/dotfiles/.config/awesome/themes/default/theme.lua ~/.config/awesome/themes/default/theme.lua
+ln -s /home/zwei/dotfiles/.config/awesome/rc.lua /home/zwei/.config/awesome/rc.lua
+ln -s /home/zwei/dotfiles/.config/awesome/themes/default/theme.lua /home/zwei/.config/awesome/themes/default/theme.lua
 
 #: kitty
-ln -s ~/dotfiles/.config/kitty/{kitty.conf,Japanesque.conf} ~/.config/kitty/
+ln -s /home/zwei/dotfiles/.config/kitty/{kitty.conf,Japanesque.conf} /home/zwei/.config/kitty/
 
 #: picom
-#ln -s ~/dotfiles/.config/picom/picom.conf ~/.config/picom/picom.conf
+#ln -s /home/zwei/dotfiles/.config/picom/picom.conf /home/zwei/.config/picom/picom.conf
 
 #: mpd
-ln -s ~/dotfiles/.config/mpd/mpd.conf ~/.config/mpd/mpd.conf
+ln -s /home/zwei/dotfiles/.config/mpd/mpd.conf /home/zwei/.config/mpd/mpd.conf
 
 #: ncmpcpp
-ln -s ~/dotfiles/.config/ncmpcpp/config ~/.config/ncmpcpp/config
+ln -s /home/zwei/dotfiles/.config/ncmpcpp/config /home/zwei/.config/ncmpcpp/config
 
 #: nvim
-#ln -s ~/dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
-#ln -s ~/dotfiles/.config/nvim/autoload/plug.vim ~/.config/nvim/plug.vim
+#ln -s /home/zwei/dotfiles/.config/nvim/init.vim /home/zwei/.config/nvim/init.vim
+#ln -s /home/zwei/dotfiles/.config/nvim/autoload/plug.vim /home/zwei/.config/nvim/plug.vim
 
 #: }}}
 
