@@ -66,3 +66,4 @@ systemctl enable lightdm
 #: Habilitar el servicio de mpd
 systemctl --user start mpd
 systemctl --user enable mpd
+
