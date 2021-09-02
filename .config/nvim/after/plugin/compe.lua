@@ -23,7 +23,7 @@ require('compe').setup {
       max_height = math.floor(vim.o.lines * 0.3),
       min_height = 1,
     };
-  
+
     source = {
       path = true;
       buffer = true;
@@ -40,7 +40,7 @@ require('compe').setup {
   local t = function(str)
     return vim.api.nvim_replace_termcodes(str, true, true, true)
   end
-  
+
   local check_back_space = function()
       local col = vim.fn.col('.') - 1
       if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
@@ -49,7 +49,7 @@ require('compe').setup {
           return false
       end
   end
-  
+
   -- Use (s-)tab to:
   --- move to prev/next item in completion menuone
   --- jump to prev/next snippet's placeholder
@@ -69,7 +69,7 @@ require('compe').setup {
       return t "<S-Tab>"
     end
   end
-  
+
 -- Map tab to the above tab complete functiones
   vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
   vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
@@ -82,4 +82,3 @@ require('compe').setup {
   vim.api.nvim_set_keymap('i', '<c-e>', 'compe#close("<c-e>")', { expr = true })
   vim.api.nvim_set_keymap('i', '<c-f>', 'compe#scroll({"delta": +4})', { expr = true })
   vim.api.nvim_set_keymap('i', '<c-d>', 'compe#scroll({"delta": -4})', { expr = true })
-  
