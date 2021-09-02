@@ -42,9 +42,6 @@ ln -s ~/dotfiles/.config/kitty/{kitty.conf,Japanesque.conf} ~/.config/kitty/
 #: picom
 #ln -s ~/dotfiles/.config/picom/picom.conf ~/.config/picom/picom.conf
 
-#: chromium
-ln -s ~/dotfiles/.config/chromium-flags.conf ~/.config/chromium-flags.conf
-
 #: mpd
 ln -s ~/dotfiles/.config/mpd/mpd.conf ~/.config/mpd/mpd.conf
 
