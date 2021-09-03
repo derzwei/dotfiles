@@ -18,7 +18,8 @@ require('packer').startup(function()
   use 'wbthomason/packer.nvim'                                                          -- Package manager
   use 'neovim/nvim-lspconfig'                                                           -- Collection of configurations for built-in LSP client
   use 'hrsh7th/nvim-compe'                                                              -- Autocompletion plugin
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}                            -- Treesitter configurations and abstraction layer for Neovim
   use {'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}} -- Statusline written in pure lua.
   use "lukas-reineke/indent-blankline.nvim"                                             -- Indent guides for Neovim
-  use {'npxbr/gruvbox.nvim', requires = {'rktjmp/lush.nvim'}}                           -- Lua port of the most famous vim colorscheme
+  use 'navarasu/onedark.nvim'                                                           -- One Dark Theme for Neovim
 end)

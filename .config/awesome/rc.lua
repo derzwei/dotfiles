@@ -277,6 +277,10 @@ globalkeys = gears.table.join(
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
     
+    -- Take screenshot
+    awful.key({ modkey }, "Print", function()
+    awful.spawn.with_shell("sleep 0.2 && scrot -q 100") end,
+              {description = "take screenshot", group = "zwei"}),
     -- Open chromium
     awful.key({ modkey }, "b", function ()
     awful.util.spawn("chromium --enable-features=WebUIDarkMode --force-dark-mode") end,

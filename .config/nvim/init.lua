@@ -1,5 +1,7 @@
-require('plugins')
 require('lspconfig')
-require('lualine')
 require('compe')
+require('nvim-treesitter')
+require('lualine')
 require('config')
+require('plugins')
+

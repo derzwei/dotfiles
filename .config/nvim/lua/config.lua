@@ -1,5 +1,5 @@
 vim.o.syntax = 'on'
-vim.o.termguicolors = true
+vim.o.cursorline = true               -- Realzar la línea actual
 vim.o.ruler = true
 vim.o.breakindent = true              -- Enable break indent
 vim.o.hidden = true                   -- Do not save when switching buffers
@@ -20,6 +20,7 @@ vim.bo.swapfile = false
 vim.o.updatetime = 250                -- Decrease update time
 vim.wo.signcolumn = 'yes'
 
+vim.o.termguicolors = true
 vim.opt.expandtab = true              -- Use spaces instead of tabs
 vim.opt.tabstop = 2                   -- Number of spaces tabs count for
 vim.opt.softtabstop = 2
@@ -27,7 +28,9 @@ vim.opt.shiftwidth = 2
 vim.opt.shiftwidth = 2                -- Size of an indent
 
 vim.o.background = 'dark'             -- or "light" for light mode
-vim.g.gruvbox_contrast_dark = 'hard'  -- Changes dark mode contrast
-vim.cmd([[colorscheme gruvbox]])      -- Set colorscheme
+--vim.g.gruvbox_contrast_dark = 'hard'  -- Changes dark mode contrast
+--vim.cmd([[colorscheme gruvbox]])      -- Seleccionar Gruvbox como tema
+vim.g.onedark_style = 'darker'        -- Seleccionar la variante de One Dark más oscura
+require('onedark').setup()            -- Seleccionar One Dark como tema
 
 vim.opt.clipboard:append('unnamedplus')
