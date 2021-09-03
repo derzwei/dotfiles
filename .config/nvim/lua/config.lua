@@ -9,10 +9,10 @@ vim.o.smartcase = true
 vim.o.inccommand = 'nosplit'          -- Incremental live completion
 vim.o.hlsearch = false                -- Set highlight on search
 
-vim.wo.number = true                  -- Make line numbers default
-vim.wo.relativenumber = true          -- Relative line numbers
+vim.wo.number = true                  -- Activar el número de línea
+vim.wo.relativenumber = true
 vim.wo.signcolumn = 'number'
-vim.wo.wrap = true                    -- Enable line wrap
+vim.wo.wrap = true                    -- Habilitar el salto de línea
 
 vim.bo.autoindent = true
 vim.bo.swapfile = false
@@ -21,15 +21,13 @@ vim.o.updatetime = 250                -- Decrease update time
 vim.wo.signcolumn = 'yes'
 
 vim.o.termguicolors = true
-vim.opt.expandtab = true              -- Use spaces instead of tabs
-vim.opt.tabstop = 2                   -- Number of spaces tabs count for
+vim.opt.expandtab = true              -- Usar espacio en lugar de tabulador
+vim.opt.tabstop = 2                   -- Cantidad de espacios por tabulador
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.shiftwidth = 2                -- Size of an indent
 
 vim.o.background = 'dark'             -- or "light" for light mode
---vim.g.gruvbox_contrast_dark = 'hard'  -- Changes dark mode contrast
---vim.cmd([[colorscheme gruvbox]])      -- Seleccionar Gruvbox como tema
 vim.g.onedark_style = 'darker'        -- Seleccionar la variante de One Dark más oscura
 require('onedark').setup()            -- Seleccionar One Dark como tema
 
