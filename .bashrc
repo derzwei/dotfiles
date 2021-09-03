@@ -23,6 +23,7 @@ shopt -s histappend
 alias ls='ls --color=auto'
 alias ll='ls -lah --color=auto'
 alias vim='nvim'
+alias bateria='acpi -V'
 alias ytmp3='youtube-dl --extract-audio --audio-format mp3'
 
 # Bash prompt personalizado

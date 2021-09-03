@@ -18,7 +18,7 @@ apt-get -y install fonts-fantasque-sans fonts-ipafont
 apt-get -y install alsa-utils pulseaudio mpd ncmpcpp sxiv mpv youtube-dl
 
 #: Misceláneo
-apt-get -y install neofetch
+apt-get -y install neofetch htop
 
 #: }}}
 
