@@ -18,6 +18,58 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
+-- Mostar valor del volumen
+local mivolumen = awful.widget.watch("amixer -c 1 -M -D pulse get Master", 10,
+    function(widget, stdout)
+        local vol = string.match(stdout, "(%d?%d?%d)%%")
+        vol = tonumber(string.format("% 3d", vol))
+        widget:set_text(" Volumen: "..vol.."% |")
+    end
+)
+
+-- Nivel de brillo de pantalla
+local mibrillo = awful.widget.watch("xbacklight -get", 10,
+    function(widget, stdout)
+        local perc = tonumber(stdout:match("(%d+).%d"))
+        widget:set_text(" Brillo: "..perc.."% |")
+    end
+)
+
+-- Información de batería con freedesktop UPower
+local mibateria = awful.widget.watch(
+    { awful.util.shell, "-c", "upower -i /org/freedesktop/UPower/devices/battery_BAT1 | sed -n '/present/,/icon-name/p'" },
+    30,
+    function(widget, stdout)
+        local bat_now = {
+            present      = "N/A",
+            state        = "N/A",
+            warninglevel = "N/A",
+            energy       = "N/A",
+            energyfull   = "N/A",
+            energyrate   = "N/A",
+            voltage      = "N/A",
+            percentage   = "N/A",
+            capacity     = "N/A",
+            icon         = "N/A"
+        }
+
+        for k, v in string.gmatch(stdout, '([%a]+[%a|-]+):%s*([%a|%d]+[,|%a|%d]-)') do
+            if     k == "present"       then bat_now.present      = v
+            elseif k == "state"         then bat_now.state        = v
+            elseif k == "warning-level" then bat_now.warninglevel = v
+            elseif k == "energy"        then bat_now.energy       = string.gsub(v, ",", ".") -- Wh
+            elseif k == "energy-full"   then bat_now.energyfull   = string.gsub(v, ",", ".") -- Wh
+            elseif k == "energy-rate"   then bat_now.energyrate   = string.gsub(v, ",", ".") -- W
+            elseif k == "voltage"       then bat_now.voltage      = string.gsub(v, ",", ".") -- V
+            elseif k == "percentage"    then bat_now.percentage   = tonumber(v)              -- %
+            elseif k == "capacity"      then bat_now.capacity     = string.gsub(v, ",", ".") -- %
+            elseif k == "icon-name"     then bat_now.icon         = v
+            end
+        end
+        widget:set_text(" Batería: " .. bat_now.percentage .. "% |")
+    end
+)
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -210,7 +262,10 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
+            --mykeyboardlayout,
+            mivolumen,
+            mibrillo,
+            mibateria,
             wibox.widget.systray(),
             mytextclock,
             s.mylayoutbox,
