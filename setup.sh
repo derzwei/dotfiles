@@ -18,7 +18,7 @@ sudo apt-get -y install fonts-fantasque-sans fonts-ipafont
 sudo apt-get -y install alsa-utils pulseaudio mpd ncmpcpp sxiv mpv youtube-dl
 
 #: Misceláneo
-sudo apt-get -y install neofetch htop
+sudo apt-get -y install neofetch htop nitrogen
 
 #: Máquinas virtuales
 #sudo apt-get -y install virt-manager qemu ovmf
