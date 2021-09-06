@@ -29,6 +29,7 @@ vim.opt.shiftwidth = 2                -- Size of an indent
 vim.opt.clipboard:append('unnamedplus')
 
 vim.o.background = 'dark'             -- o "light" para el modo claro
+--vim.g.onedark_transparent_background = true
 vim.g.onedark_style = 'darker'        -- Seleccionar la variante de One Dark más oscura
 require('onedark').setup()            -- Seleccionar One Dark como tema
 

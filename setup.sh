@@ -9,7 +9,7 @@ sudo apt-get update && sudo apt-get upgrade
 #: Instalar paquetes {{{
 
 #: Base
-sudo apt-get -y install firmware-iwlwifi iwd tlp acpi-call-dkms lightdm picom mesa-utils xbacklight awesome xsel scrot chromium chromium-l10n
+sudo apt-get -y install firmware-iwlwifi iwd tlp acpi-call-dkms lightdm mesa-utils xbacklight awesome xsel scrot chromium chromium-l10n
 
 #: Fuentes
 sudo apt-get -y install fonts-fantasque-sans fonts-ipafont
@@ -18,7 +18,7 @@ sudo apt-get -y install fonts-fantasque-sans fonts-ipafont
 sudo apt-get -y install alsa-utils pulseaudio mpd ncmpcpp sxiv mpv youtube-dl
 
 #: Misceláneo
-sudo apt-get -y install neofetch htop nitrogen
+sudo apt-get -y install neofetch htop nemo nitrogen
 
 #: Máquinas virtuales
 #sudo apt-get -y install virt-manager qemu ovmf
