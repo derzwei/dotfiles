@@ -6,9 +6,9 @@ window:
 font:
   normal:
     # Nombre
-    family: Fantasque Sans Mono
+    family: IBM Plex Mono
   # Tamaño
-  size: 11.0
+  size: 9.0
 
 # Dibujar el texto en negrita usando la variante de colores brillantes.
 draw_bold_text_with_bright_colors: true
