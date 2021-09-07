@@ -12,7 +12,7 @@ sudo apt-get update && sudo apt-get upgrade
 sudo apt-get -y install firmware-iwlwifi iwd tlp acpi-call-dkms lightdm mesa-utils xbacklight awesome xsel scrot chromium chromium-l10n
 
 #: Fuentes
-sudo apt-get -y install fonts-fantasque-sans fonts-ipafont
+sudo apt-get -y install fonts-ibm-plex fonts-fantasque-sans fonts-ipafont
 
 #: Media
 sudo apt-get -y install alsa-utils pulseaudio mpd ncmpcpp sxiv mpv youtube-dl
@@ -43,7 +43,7 @@ ln -s ~/dotfiles/.config/awesome/themes/default/theme.lua ~/.config/awesome/them
 ln -s ~/dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 
 #: picom
-#ln -s ~/dotfiles/.config/picom/picom.conf /home/zwei/.config/picom/picom.conf
+ln -s ~/dotfiles/.config/picom/picom.conf /home/zwei/.config/picom/picom.conf
 
 #: mpd
 ln -s ~/dotfiles/.config/mpd/mpd.conf ~/.config/mpd/mpd.conf
