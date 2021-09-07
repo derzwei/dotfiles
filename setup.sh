@@ -27,7 +27,7 @@ sudo apt-get -y install neofetch htop nemo nitrogen
 
 #: Crear directorios de configuración
 
-mkdir -p ~/.config/{awesome/themes/default,alacritty,mpd,ncmpcpp,nvim/autoload}
+mkdir -p ~/.config/{awesome/themes/default,alacritty,mpd,ncmpcpp,nvim/{lua,after/plugin}}
 
 #: Crear enlaces simbólicos de los archivos de configuración {{{
 
@@ -43,7 +43,7 @@ ln -s ~/dotfiles/.config/awesome/themes/default/theme.lua ~/.config/awesome/them
 ln -s ~/dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 
 #: picom
-ln -s ~/dotfiles/.config/picom/picom.conf /home/zwei/.config/picom/picom.conf
+ln -s ~/dotfiles/.config/picom/picom.conf ~/.config/picom/picom.conf
 
 #: mpd
 ln -s ~/dotfiles/.config/mpd/mpd.conf ~/.config/mpd/mpd.conf
@@ -52,6 +52,9 @@ ln -s ~/dotfiles/.config/mpd/mpd.conf ~/.config/mpd/mpd.conf
 ln -s ~/dotfiles/.config/ncmpcpp/config ~/.config/ncmpcpp/config
 
 #: nvim
+ln -s ~/dotfiles/.config/nvim/init.lua ~/.config/nvim/init.lua
+ln -s ~/dotfiles/.config/nvim/lua/* ~/.config/nvim/lua/
+ln -s ~/dotfiles/.config/nvim/after/plugin/* ~/.config/nvim/after/plugin/
 
 #: }}}
 
