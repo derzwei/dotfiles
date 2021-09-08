@@ -6,7 +6,7 @@ window:
 font:
   normal:
     # Nombre
-    family: IBM Plex Mono
+    family: Iosevka
   # Tamaño
   size: 9.0
 
