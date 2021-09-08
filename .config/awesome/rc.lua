@@ -268,7 +268,7 @@ awful.screen.connect_for_each_screen(function(s)
             mibateria,
             wibox.widget.systray(),
             mytextclock,
-            s.mylayoutbox,
+            --s.mylayoutbox,
         },
     }
 end)
