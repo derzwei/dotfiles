@@ -9,7 +9,7 @@ sudo apt-get update && sudo apt-get upgrade
 #: Instalar paquetes {{{
 
 #: Base
-sudo apt-get -y install firmware-iwlwifi iwd tlp acpi-call-dkms lightdm mesa-utils xbacklight awesome xsel scrot chromium chromium-l10n
+sudo apt-get -y install iwd tlp acpi-call-dkms lightdm xbacklight awesome xsel scrot chromium chromium-l10n
 
 #: Fuentes
 sudo apt-get -y install fonts-ibm-plex fonts-fantasque-sans fonts-ipafont
